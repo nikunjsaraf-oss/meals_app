@@ -10,18 +10,20 @@ class CategoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(15),
-      child: Text(title),
-      color: color,
+      child: Text(
+        title,
+        style: Theme.of(context).textTheme.headline6,
+      ),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
             color.withOpacity(0.7),
             color,
           ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
         ),
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(30),
       ),
     );
   }
